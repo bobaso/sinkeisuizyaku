@@ -321,7 +321,6 @@ function cardClick(card){
 
 }
 
-
 // -----------------------------
 // カードをめくる
 // -----------------------------
@@ -329,25 +328,9 @@ function openCard(card){
 
     card.dataset.open = "true";
 
-    function openCard(card){
-
-    card.dataset.open = "true";
-
+    // カードを回転
     card.classList.add("flipped");
 
-    openedCards.push(card);
-
-    rememberCard(card);
-
-    if(openedCards.length===2){
-
-        lockBoard=true;
-
-        setTimeout(checkPair,800);
-
-    }
-
-}
     openedCards.push(card);
 
     // CPUは見たカードを記憶
@@ -362,8 +345,6 @@ function openCard(card){
     }
 
 }
-
-
 // -----------------------------
 // ペア判定
 // -----------------------------
@@ -441,12 +422,12 @@ function checkPair(){
 // -----------------------------
 function closeCard(card){
 
-    card.dataset.open="false";
+    card.dataset.open = "false";
 
+    // 裏面へ戻す
     card.classList.remove("flipped");
 
 }
-
 // -----------------------------
 // ターン交代
 // -----------------------------
