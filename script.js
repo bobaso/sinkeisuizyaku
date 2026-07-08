@@ -432,7 +432,7 @@ function closeCard(card){
 
     const img = document.createElement("img");
 
-    img.src = "images/back.png";
+    img.src = "back.png";
 
     img.onerror = function(){
 
