@@ -180,17 +180,15 @@ p{
 
     overflow:hidden;
 
-    cursor:pointer;
-
     border:3px solid #4aa3ff;
 
-    display:flex;
+    position:relative;
 
-    justify-content:center;
+    transform-style:preserve-3d;
 
-    align-items:center;
+    transition:transform .45s ease;
 
-    transition:.25s;
+    cursor:pointer;
 
 }
 .card img{
@@ -318,22 +316,6 @@ p{
 カードめくりアニメーション
 ========================== */
 
-.card{
-
-    position:relative;
-
-    transform-style:preserve-3d;
-
-    transition:transform .45s ease;
-
-}
-
-.card.flipped{
-
-    transform:rotateY(180deg);
-
-}
-
 .card-front,
 .card-back{
 
@@ -341,7 +323,14 @@ p{
 
     inset:0;
 
+    width:100%;
+    height:100%;
+
     backface-visibility:hidden;
+
+    border-radius:12px;
+
+    overflow:hidden;
 
 }
 
@@ -351,14 +340,8 @@ p{
 
 }
 
-.card-front img,
-.card-back img{
+.card-back{
 
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-
-    display:block;
+    transform:rotateY(0deg);
 
 }
