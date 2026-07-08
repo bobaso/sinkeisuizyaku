@@ -175,41 +175,20 @@ function updateTurnText(){
 
 function createCards(){
 
-    board.innerHTML = "";
+    board.innerHTML="";
 
-    cards = [];
+    cards=[];
 
-    const list = [
+    const list=[
 
-        {
-            id:1,
-            image:cardImages[0]
-        },
+        {id:1,image:cardImages[0]},
+        {id:1,image:cardImages[0]},
 
-        {
-            id:1,
-            image:cardImages[0]
-        },
+        {id:2,image:cardImages[1]},
+        {id:2,image:cardImages[1]},
 
-        {
-            id:2,
-            image:cardImages[1]
-        },
-
-        {
-            id:2,
-            image:cardImages[1]
-        },
-
-        {
-            id:3,
-            image:cardImages[2]
-        },
-
-        {
-            id:3,
-            image:cardImages[2]
-        }
+        {id:3,image:cardImages[2]},
+        {id:3,image:cardImages[2]}
 
     ];
 
@@ -217,42 +196,84 @@ function createCards(){
 
     list.forEach((data,index)=>{
 
-        const card = document.createElement("div");
+        const card=document.createElement("div");
 
-        card.className = "card";
+        card.className="card";
 
-        card.dataset.index = index;
+        card.dataset.index=index;
 
-        card.dataset.id = data.id;
+        card.dataset.id=data.id;
 
-        card.dataset.image = data.image;
+        card.dataset.image=data.image;
 
-        card.dataset.open = "false";
+        card.dataset.open="false";
 
-        card.dataset.match = "false";
+        card.dataset.match="false";
 
-        const back = document.createElement("div");
-back.className = "card-back";
 
-const backImg = document.createElement("img");
-backImg.src = "back.png";
-back.appendChild(backImg);
+        // -----------------
+        // 裏面
+        // -----------------
 
-const front = document.createElement("div");
-front.className = "card-front";
+        const back=document.createElement("div");
 
-const frontImg = document.createElement("img");
-frontImg.src = data.image;
-front.appendChild(frontImg);
+        back.className="card-back";
 
-card.appendChild(back);
-card.appendChild(front);
+        const backImg=document.createElement("img");
+
+        backImg.src="back.png";
+
+        backImg.onerror=function(){
+
+            back.innerHTML="<div class='placeholder'>CARD</div>";
+
+        };
+
+        back.appendChild(backImg);
+
+
+        // -----------------
+        // 表面
+        // -----------------
+
+        const front=document.createElement("div");
+
+        front.className="card-front";
+
+        const frontImg=document.createElement("img");
+
+        frontImg.src=data.image;
+
+        frontImg.onerror=function(){
+
+            front.innerHTML="<div class='placeholder'>CARD "
+                + data.id +
+                "</div>";
+
+        };
+
+        front.appendChild(frontImg);
+
+
+        // -----------------
+        // カードへ追加
+        // -----------------
+
+        card.appendChild(back);
+
+        card.appendChild(front);
+
+
+        // -----------------
+        // クリック
+        // -----------------
 
         card.addEventListener("click",()=>{
 
             cardClick(card);
 
         });
+
 
         board.appendChild(card);
 
