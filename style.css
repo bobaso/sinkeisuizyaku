@@ -324,7 +324,7 @@ p{
 
     transform-style:preserve-3d;
 
-    transition:transform .45s;
+    transition:transform .45s ease;
 
 }
 
@@ -355,9 +355,10 @@ p{
 .card-back img{
 
     width:100%;
-
     height:100%;
 
     object-fit:contain;
+
+    display:block;
 
 }
