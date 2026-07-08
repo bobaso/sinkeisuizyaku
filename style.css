@@ -149,6 +149,8 @@ p{
 ========================== */
 .board{
 
+　　　perspective:1000px;
+    
     display:grid;
 
     grid-template-columns:repeat(3, 1fr);
@@ -174,8 +176,6 @@ p{
 
     aspect-ratio:2/3;
 
-    background:white;
-
     border-radius:12px;
 
     overflow:hidden;
@@ -185,8 +185,6 @@ p{
     position:relative;
 
     transform-style:preserve-3d;
-
-    perspective:1000px;
 
     transition:transform .45s ease;
 
@@ -204,17 +202,6 @@ p{
     display:block;
 
 }
-
-/* ==========================
-裏面
-========================== */
-
-.card.back{
-
-    background:#4aa3ff;
-
-}
-
 
 /* ==========================
 画像がまだ無い時の枠
@@ -322,6 +309,12 @@ p{
 .card-front,
 .card-back{
 
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+    
     position:absolute;
 
     inset:0;
