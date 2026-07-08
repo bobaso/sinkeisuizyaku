@@ -59,6 +59,7 @@ const cardImages = [
     "card1.png",
     "card2.png",
     "card3.png"
+    "card4.png"
 
 ];
 
@@ -179,18 +180,21 @@ function createCards(){
 
     cards=[];
 
-    const list=[
+const list=[
 
-        {id:1,image:cardImages[0]},
-        {id:1,image:cardImages[0]},
+    {id:1,image:cardImages[0]},
+    {id:1,image:cardImages[0]},
 
-        {id:2,image:cardImages[1]},
-        {id:2,image:cardImages[1]},
+    {id:2,image:cardImages[1]},
+    {id:2,image:cardImages[1]},
 
-        {id:3,image:cardImages[2]},
-        {id:3,image:cardImages[2]}
+    {id:3,image:cardImages[2]},
+    {id:3,image:cardImages[2]},
 
-    ];
+    {id:4,image:cardImages[3]},
+    {id:4,image:cardImages[3]}
+
+];
 
     shuffle(list);
 
@@ -381,7 +385,7 @@ function checkPair(){
         lockBoard = false;
 
         // 全部揃った？
-        if(matchedCount === 3){
+        if(matchedCount === 4){
 
             setTimeout(endGame,600);
             return;
