@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神経衰弱</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===========================
+スタート画面
+=========================== -->
+
+<div id="startScreen" class="screen">
+
+    <h1>🃏 神経衰弱</h1>
+
+    <button id="singleBtn" class="menuButton">
+        一人で遊ぶ
+    </button>
+
+    <button id="multiBtn" class="menuButton">
+        二人で遊ぶ
+    </button>
+
+</div>
+
+
+<!-- ===========================
+ゲーム画面
+=========================== -->
+
+<div id="gameScreen" class="screen hidden">
+
+    <div class="scoreArea">
+
+        <div id="player1Score">
+            プレイヤー1：0組
+        </div>
+
+        <div id="player2Score">
+            CPU：0組
+        </div>
+
+    </div>
+
+    <div id="turnText" class="turnText">
+        プレイヤー1の番
+    </div>
+
+    <div id="board" class="board">
+
+        <!-- JavaScriptでカード生成 -->
+
+    </div>
+
+</div>
+
+
+<!-- ===========================
+ゲーム終了画面
+=========================== -->
+
+<div id="resultScreen" class="screen hidden">
+
+    <h2 id="resultTitle">
+        ゲーム終了！
+    </h2>
+
+    <p id="winnerText"></p>
+
+    <button id="retryBtn" class="menuButton">
+        もう一度遊ぶ
+    </button>
+
+    <button id="homeBtn" class="menuButton">
+        スタート画面へ戻る
+    </button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
