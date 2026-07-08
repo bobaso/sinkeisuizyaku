@@ -345,3 +345,6 @@ p{
     transform:rotateY(0deg);
 
 }
+.card.flipped{
+    transform:rotateY(180deg);
+}
