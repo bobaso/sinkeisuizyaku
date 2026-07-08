@@ -455,3 +455,59 @@ body{
 
     transform-style:preserve-3d;
 }
+/* ==========================
+ゲーム終了画面
+========================== */
+
+#resultScreen{
+
+    width:100%;
+
+    min-height:100dvh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+.resultBox{
+
+    width:90%;
+
+    max-width:350px;
+
+}
+
+
+/* 終了ボタン */
+
+#retryBtn,
+#homeBtn{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:10px 0;
+
+    font-size:22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#4aa3ff;
+
+    color:white;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+}
