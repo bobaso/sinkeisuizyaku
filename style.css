@@ -159,7 +159,9 @@ body{
     font-size:22px;
 
     border:none;
-
+    
+　　　white-space:nowrap;
+    
     border-radius:12px;
 
     background:#4aa3ff;
