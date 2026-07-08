@@ -334,16 +334,34 @@ p{
 .card-front{
 
     transform:rotateY(180deg);
+    z-index:1;
 
 }
 
 .card-back{
 
     transform:rotateY(0deg);
+    z-index:2;
 
 }
 .card.flipped{
 
     transform:rotateY(180deg);
 
+}
+.card.flipped .card-back{
+
+    transform:rotateY(180deg);
+
+}
+
+.card.flipped .card-front{
+
+    transform:rotateY(360deg);
+
+}
+.card-front,
+.card-back{
+
+    transform-style:preserve-3d;
 }
