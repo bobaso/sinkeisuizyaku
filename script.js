@@ -58,7 +58,7 @@ const cardImages = [
 
     "card1.png",
     "card2.png",
-    "card3.png"
+    "card3.png",
     "card4.png"
 
 ];
