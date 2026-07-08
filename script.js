@@ -121,15 +121,18 @@ function startGame(){
 
 function updateScore(){
 
-    player1ScoreText.textContent =
-        "プレイヤー1：" + player1Score + "組";
-
     if(gameMode === "single"){
+
+        player1ScoreText.textContent =
+            "あなた：" + player1Score + "組";
 
         player2ScoreText.textContent =
             "CPU：" + player2Score + "組";
 
     }else{
+
+        player1ScoreText.textContent =
+            "プレイヤー1：" + player1Score + "組";
 
         player2ScoreText.textContent =
             "プレイヤー2：" + player2Score + "組";
@@ -150,16 +153,16 @@ function updateTurnText(){
     if(gameMode === "single"){
 
         turnText.textContent =
-            currentPlayer === 1 ?
-            "プレイヤー1の番" :
-            "CPUの番";
+            currentPlayer === 1
+            ? "あなたの番"
+            : "CPUの番";
 
     }else{
 
         turnText.textContent =
-            currentPlayer === 1 ?
-            "プレイヤー1の番" :
-            "プレイヤー2の番";
+            currentPlayer === 1
+            ? "プレイヤー1の番"
+            : "プレイヤー2の番";
 
     }
 
@@ -476,7 +479,6 @@ function changeTurn(){
 
 }
 // =============================
-// 第3回（最終回）
 // 簡易CPU・ゲーム終了
 // =============================
 
@@ -543,9 +545,17 @@ function endGame(){
 
     resultScreen.classList.remove("hidden");
 
-    if(player1Score>player2Score){
+if(player1Score > player2Score){
 
-        winnerText.textContent="プレイヤー1の勝ち！";
+    if(gameMode === "single"){
+
+        winnerText.textContent = "あなたの勝ち！";
+
+    }else{
+
+        winnerText.textContent = "プレイヤー1の勝ち！";
+
+    }
 
     }else if(player2Score>player1Score){
 
