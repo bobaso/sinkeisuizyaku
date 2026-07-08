@@ -91,11 +91,11 @@ multiBtn.addEventListener("click", () => {
 
 function startGame(){
 
-    startScreen.classList.add("hidden");
+    startScreen.style.display = "none";
 
-    resultScreen.classList.add("hidden");
+    resultScreen.style.display = "none";
 
-    gameScreen.classList.remove("hidden");
+    gameScreen.style.display = "block";
 
     player1Score = 0;
 
@@ -520,9 +520,9 @@ function cpuTurn(){
 // -----------------------------
 function endGame(){
 
-    gameScreen.classList.add("hidden");
+    gameScreen.style.display = "none";
 
-    resultScreen.classList.remove("hidden");
+    resultScreen.style.display = "flex";
 
 if(player1Score > player2Score){
 
@@ -572,10 +572,10 @@ retryBtn.addEventListener("click",()=>{
 // -----------------------------
 homeBtn.addEventListener("click",()=>{
 
-    resultScreen.classList.add("hidden");
+    resultScreen.style.display = "none";
 
-    gameScreen.classList.add("hidden");
+    gameScreen.style.display = "none";
 
-    startScreen.classList.remove("hidden");
+    startScreen.style.display = "flex";
 
 });
