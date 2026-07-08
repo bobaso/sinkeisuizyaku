@@ -38,33 +38,100 @@ body{
 
 }
 
+/*==========================
+スタート画面
+==========================*/
 
-/* ==========================
-タイトル
-========================== */
+.startMenu{
 
-h1{
+    position:relative;
 
-    margin-bottom:40px;
-    font-size:36px;
+    width:100%;
+    max-width:450px;
 
-}
-
-h2{
-
-    margin-bottom:20px;
+    margin:auto;
 
 }
 
-p{
+.startImage{
 
-    margin:20px 0;
+    width:100%;
 
-    font-size:22px;
+    display:block;
+
+    border-radius:20px;
 
 }
 
 
+/*==========================
+ボタン配置
+==========================*/
+
+.menuArea{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:8%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+/*==========================
+画像ボタン
+==========================*/
+
+.imageButton{
+
+    width:66.7%;
+
+    max-width:300px;
+
+    border:none;
+
+    background:none;
+
+    padding:0;
+
+    cursor:pointer;
+
+}
+
+.imageButton img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.2s;
+
+}
+
+.imageButton:hover img{
+
+    transform:scale(1.03);
+
+}
+
+.imageButton:active img{
+
+    transform:scale(.96);
+
+}
 /* ==========================
 ボタン
 ========================== */
