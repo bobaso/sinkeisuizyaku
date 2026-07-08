@@ -56,9 +56,9 @@ let cpuMemory = [];
 
 const cardImages = [
 
-    "images/card1.png",
-    "images/card2.png",
-    "images/card3.png"
+    "card1.png",
+    "card2.png",
+    "card3.png"
 
 ];
 
