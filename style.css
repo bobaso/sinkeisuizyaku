@@ -74,9 +74,9 @@ body{
 
     left:50%;
 
-    bottom:8%;
+    top:58%;
 
-    transform:translateX(-50%);
+    transform:translate(-50%,-50%);
 
     width:100%;
 
@@ -86,7 +86,7 @@ body{
 
     align-items:center;
 
-    gap:20px;
+    gap:30px;
 
 }
 
