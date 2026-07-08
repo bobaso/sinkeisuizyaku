@@ -47,13 +47,11 @@ body{
 /*==========================
 スタート画面
 ==========================*/
-
 .startMenu{
 
     position:relative;
 
-    width:100%;
-    max-width:450px;
+    width:min(92vw,520px);
 
 }
 
@@ -78,7 +76,7 @@ body{
 
     left:50%;
 
-    top:65%;
+    top:50%;
 
     transform:translate(-50%,-50%);
 
@@ -101,7 +99,7 @@ body{
 
 .imageButton{
 
-    width:66.7%;
+    width:70%;
 
     max-width:300px;
 
