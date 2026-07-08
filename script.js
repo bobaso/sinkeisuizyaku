@@ -231,25 +231,22 @@ function createCards(){
 
         card.dataset.match = "false";
 
-        const img = document.createElement("img");
+        const back = document.createElement("div");
+back.className = "card-back";
 
-        img.src = "back.png";
+const backImg = document.createElement("img");
+backImg.src = "back.png";
+back.appendChild(backImg);
 
-        img.onerror = function(){
+const front = document.createElement("div");
+front.className = "card-front";
 
-            img.remove();
+const frontImg = document.createElement("img");
+frontImg.src = data.image;
+front.appendChild(frontImg);
 
-            const place = document.createElement("div");
-
-            place.className = "placeholder";
-
-            place.innerHTML = "CARD";
-
-            card.appendChild(place);
-
-        };
-
-        card.appendChild(img);
+card.appendChild(back);
+card.appendChild(front);
 
         card.addEventListener("click",()=>{
 
@@ -311,28 +308,25 @@ function openCard(card){
 
     card.dataset.open = "true";
 
-    card.innerHTML = "";
+    function openCard(card){
 
-    const img = document.createElement("img");
+    card.dataset.open = "true";
 
-    img.src = card.dataset.image;
+    card.classList.add("flipped");
 
-    img.onerror = function(){
+    openedCards.push(card);
 
-        img.remove();
+    rememberCard(card);
 
-        const place = document.createElement("div");
+    if(openedCards.length===2){
 
-        place.className = "placeholder";
+        lockBoard=true;
 
-        place.innerHTML = "CARD " + card.dataset.id;
+        setTimeout(checkPair,800);
 
-        card.appendChild(place);
+    }
 
-    };
-
-    card.appendChild(img);
-
+}
     openedCards.push(card);
 
     // CPUは見たカードを記憶
@@ -426,32 +420,11 @@ function checkPair(){
 // -----------------------------
 function closeCard(card){
 
-    card.dataset.open = "false";
+    card.dataset.open="false";
 
-    card.innerHTML = "";
-
-    const img = document.createElement("img");
-
-    img.src = "back.png";
-
-    img.onerror = function(){
-
-        img.remove();
-
-        const place = document.createElement("div");
-
-        place.className = "placeholder";
-
-        place.innerHTML = "CARD";
-
-        card.appendChild(place);
-
-    };
-
-    card.appendChild(img);
+    card.classList.remove("flipped");
 
 }
-
 
 // -----------------------------
 // ターン交代
