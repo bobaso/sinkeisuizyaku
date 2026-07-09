@@ -585,34 +585,11 @@ body{
     gap:25px;
 
 }
+/*==========================
+戻る画像ボタン
+==========================*/
 
-
-.difficultyButton{
-
-    width:70%;
-
-    height:80px;
-
-    border:none;
-
-    border-radius:15px;
-
-    background:#4aa3ff;
-
-    color:white;
-
-    font-size:28px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-}
-
-
-/* 戻るボタン */
-
-.backButton{
+.backImageButton{
 
     position:absolute;
 
@@ -622,18 +599,34 @@ body{
 
     width:120px;
 
-    height:70px;
-
     border:none;
 
-    border-radius:15px;
+    background:none;
 
-    background:#4aa3ff;
+    padding:0;
 
-    color:white;
+    cursor:pointer;
 
-    font-size:22px;
+}
 
-    font-weight:bold;
+.backImageButton img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.2s;
+
+}
+
+.backImageButton:hover img{
+
+    transform:scale(1.03);
+
+}
+
+.backImageButton:active img{
+
+    transform:scale(.96);
 
 }
