@@ -464,8 +464,17 @@ function checkPair(){
         card1.dataset.match = "true";
         card2.dataset.match = "true";
 
-        card1.classList.add("matched");
-        card2.classList.add("matched");
+      if(currentPlayer === 1){
+
+    card1.classList.add("matched-player1");
+    card2.classList.add("matched-player1");
+
+}else{
+
+    card1.classList.add("matched-player2");
+    card2.classList.add("matched-player2");
+
+}
 
         matchedCount++;
 
