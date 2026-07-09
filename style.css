@@ -513,3 +513,127 @@ body{
     white-space:nowrap;
 
 }
+/*==========================
+難易度選択画面
+==========================*/
+
+#difficultyScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100dvh;
+
+    background:#e8f5ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    z-index:10000;
+
+}
+
+
+/* 背景画像 */
+
+.difficultyMenu{
+
+    position:relative;
+
+    width:min(92vw,520px);
+
+}
+
+
+.difficultyBackground{
+
+    width:100%;
+
+    display:block;
+
+}
+
+
+/* 難易度ボタン */
+
+.difficultyButtons{
+
+    position:absolute;
+
+    left:50%;
+
+    top:55%;
+
+    transform:translate(-50%,-50%);
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+.difficultyButton{
+
+    width:70%;
+
+    height:80px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#4aa3ff;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+/* 戻るボタン */
+
+.backButton{
+
+    position:absolute;
+
+    left:20px;
+
+    bottom:20px;
+
+    width:120px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#4aa3ff;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
