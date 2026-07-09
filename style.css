@@ -563,14 +563,13 @@ body{
 
 
 /* 難易度ボタン */
-
 .difficultyButtons{
 
     position:absolute;
 
     left:50%;
 
-    top:55%;
+    top:60%;
 
     transform:translate(-50%,-50%);
 
@@ -582,7 +581,7 @@ body{
 
     align-items:center;
 
-    gap:25px;
+    gap:28px;
 
 }
 /*==========================
@@ -593,11 +592,11 @@ body{
 
     position:absolute;
 
-    left:12px;
+    left:18px;
 
-    bottom:12px;
+    bottom:18px;
 
-    width:clamp(40px, 8vw, 60px);
+    width:clamp(60px,12vw,80px);
 
     border:none;
 
