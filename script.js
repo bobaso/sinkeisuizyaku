@@ -42,6 +42,8 @@ let currentPlayer = 1;
 
 let lockBoard = false;
 
+let difficulty = "easy";
+
 
 // -----------------------------
 // CPU記憶用
@@ -59,10 +61,15 @@ const cardImages = [
     "card1.png",
     "card2.png",
     "card3.png",
-    "card4.png"
+    "card4.png",
+    "card5.png",
+    "card6.png",
+    "card7.png",
+    "card8.png",
+    "card9.png",
+    "card10.png"
 
 ];
-
 
 // -----------------------------
 // スタートボタン
@@ -113,16 +120,27 @@ backBtn.addEventListener("click",()=>{
 // -----------------------------
 document.querySelectorAll("#easyBtn, #normalBtn, #hardBtn")
 .forEach(button=>{
+button.addEventListener("click",()=>{
 
-    button.addEventListener("click",()=>{
+    if(button.id==="easyBtn"){
 
-        console.log(button.id);
+        difficulty="easy";
 
-        difficultyScreen.classList.add("hidden");
+    }else if(button.id==="normalBtn"){
 
-        startGame();
+        difficulty="normal";
 
-    });
+    }else{
+
+        difficulty="hard";
+
+    }
+
+    difficultyScreen.classList.add("hidden");
+
+    startGame();
+
+});
 
 });
 
@@ -220,21 +238,43 @@ function createCards(){
 
     cards=[];
 
-const list=[
+const list=[];
 
-    {id:1,image:cardImages[0]},
-    {id:1,image:cardImages[0]},
+let pairCount;
 
-    {id:2,image:cardImages[1]},
-    {id:2,image:cardImages[1]},
+if(difficulty==="easy"){
 
-    {id:3,image:cardImages[2]},
-    {id:3,image:cardImages[2]},
+    pairCount=4;
 
-    {id:4,image:cardImages[3]},
-    {id:4,image:cardImages[3]}
+}else if(difficulty==="normal"){
 
-];
+    pairCount=6;
+
+}else{
+
+    pairCount=10;
+
+}
+
+for(let i=0;i<pairCount;i++){
+
+    list.push({
+
+        id:i+1,
+
+        image:cardImages[i]
+
+    });
+
+    list.push({
+
+        id:i+1,
+
+        image:cardImages[i]
+
+    });
+
+}
 
     shuffle(list);
 
@@ -254,7 +294,19 @@ const list=[
 
         card.dataset.match="false";
 
+if(difficulty==="easy"){
 
+    board.style.gridTemplateColumns="repeat(4,1fr)";
+
+}else if(difficulty==="normal"){
+
+    board.style.gridTemplateColumns="repeat(4,1fr)";
+
+}else{
+
+    board.style.gridTemplateColumns="repeat(5,1fr)";
+
+}
         // -----------------
         // 裏面
         // -----------------
