@@ -68,22 +68,65 @@ const cardImages = [
 // スタートボタン
 // -----------------------------
 
+const difficultyScreen =
+    document.getElementById("difficultyScreen");
+
+
 singleBtn.addEventListener("click", () => {
 
     gameMode = "single";
 
-    startGame();
+    openDifficulty();
 
 });
+
 
 multiBtn.addEventListener("click", () => {
 
     gameMode = "multi";
 
-    startGame();
+    openDifficulty();
 
 });
 
+
+// 難易度画面表示
+
+function openDifficulty(){
+
+    startScreen.style.display="none";
+
+    difficultyScreen.classList.remove("hidden");
+
+}
+const backBtn =
+    document.getElementById("backBtn");
+
+
+backBtn.addEventListener("click",()=>{
+
+    difficultyScreen.classList.add("hidden");
+
+    startScreen.style.display="flex";
+
+});
+// -----------------------------
+// 難易度処理
+// -----------------------------
+document.querySelectorAll(".difficultyButton")
+.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        console.log(button.textContent + "を選択");
+
+        // 後でここに難易度処理を追加
+
+        startGame();
+
+    });
+
+});
 
 // -----------------------------
 // ゲーム開始
