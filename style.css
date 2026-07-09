@@ -330,9 +330,19 @@ body{
 揃ったカード
 ========================== */
 
-.card.matched{
+/* あなた・プレイヤー1 */
+.card.matched-player1{
 
-    border-color:#00c853;
+    border:3px solid #00c853;
+
+    cursor:default;
+
+}
+
+/* CPU・プレイヤー2 */
+.card.matched-player2{
+
+    border:3px solid #ff5252;
 
     cursor:default;
 
