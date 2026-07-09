@@ -29,12 +29,6 @@ body{
 
 }
 
-.hidden{
-
-    display:none;
-
-}
-
 /*==========================
 スタート画面固定
 ==========================*/
@@ -640,5 +634,15 @@ body{
 .backImageButton:active img{
 
     transform:scale(.96);
+
+}
+
+/*==========================
+.hidden（必ず一番最後）
+==========================*/
+
+.hidden{
+
+    display:none !important;
 
 }
