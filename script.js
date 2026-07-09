@@ -113,14 +113,14 @@ backBtn.addEventListener("click",()=>{
 // -----------------------------
 // 難易度処理
 // -----------------------------
-document.querySelectorAll(".difficultyButton")
+document.querySelectorAll("#easyBtn, #normalBtn, #hardBtn")
 .forEach(button=>{
 
     button.addEventListener("click",()=>{
 
-        console.log(button.textContent + "を選択");
+        console.log(button.id);
 
-        // 後でここに難易度処理を追加
+        difficultyScreen.classList.add("hidden");
 
         startGame();
 
