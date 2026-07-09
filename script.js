@@ -1,7 +1,7 @@
 // -----------------------------
 // HTML取得
 // -----------------------------
-
+　
 const startScreen = document.getElementById("startScreen");
 const gameScreen = document.getElementById("gameScreen");
 const resultScreen = document.getElementById("resultScreen");
