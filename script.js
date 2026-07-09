@@ -44,6 +44,7 @@ let lockBoard = false;
 
 let difficulty = "easy";
 
+let totalPairs = 4;
 
 // -----------------------------
 // CPU記憶用
@@ -256,6 +257,7 @@ if(difficulty==="easy"){
 
 }
 
+    totalPairs = pairCount;
 for(let i=0;i<pairCount;i++){
 
     list.push({
@@ -484,7 +486,7 @@ function checkPair(){
         lockBoard = false;
 
         // 全部揃った？
-        if(matchedCount === 4){
+        if(matchedCount === totalPairs){
 
             setTimeout(endGame,600);
             return;
