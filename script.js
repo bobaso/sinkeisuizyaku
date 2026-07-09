@@ -91,10 +91,9 @@ multiBtn.addEventListener("click", () => {
 
 
 // 難易度画面表示
-
 function openDifficulty(){
 
-    startScreen.style.display="none";
+    startScreen.classList.add("hidden");
 
     difficultyScreen.classList.remove("hidden");
 
@@ -102,12 +101,11 @@ function openDifficulty(){
 const backBtn =
     document.getElementById("backBtn");
 
-
 backBtn.addEventListener("click",()=>{
 
     difficultyScreen.classList.add("hidden");
 
-    startScreen.style.display="flex";
+    startScreen.classList.remove("hidden");
 
 });
 // -----------------------------
@@ -131,20 +129,15 @@ document.querySelectorAll("#easyBtn, #normalBtn, #hardBtn")
 // -----------------------------
 // ゲーム開始
 // -----------------------------
-
 function startGame(){
 
-    startScreen.style.display = "none";
-
-    resultScreen.style.display = "none";
-
-    gameScreen.style.display = "block";
+    startScreen.classList.add("hidden");
 
     difficultyScreen.classList.add("hidden");
 
-startScreen.style.display = "none";
+    resultScreen.classList.add("hidden");
 
-gameScreen.style.display = "block";
+    gameScreen.classList.remove("hidden");
 
     player1Score = 0;
 
@@ -163,8 +156,6 @@ gameScreen.style.display = "block";
     createCards();
 
 }
-
-
 // -----------------------------
 // スコア表示
 // -----------------------------
@@ -569,9 +560,9 @@ function cpuTurn(){
 // -----------------------------
 function endGame(){
 
-    gameScreen.style.display = "none";
+    gameScreen.classList.add("hidden");
 
-    resultScreen.style.display = "flex";
+    resultScreen.classList.remove("hidden");
 
 if(player1Score > player2Score){
 
@@ -621,12 +612,12 @@ retryBtn.addEventListener("click",()=>{
 // -----------------------------
 homeBtn.addEventListener("click",()=>{
 
-    resultScreen.style.display = "none";
+    resultScreen.classList.add("hidden");
 
-    gameScreen.style.display = "none";
+    gameScreen.classList.add("hidden");
 
     difficultyScreen.classList.add("hidden");
 
-    startScreen.style.display = "flex";
+    startScreen.classList.remove("hidden");
 
 });
