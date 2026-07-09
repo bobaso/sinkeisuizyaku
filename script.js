@@ -376,6 +376,13 @@ if(difficulty==="easy"){
         cards.push(card);
 
     });
+    board.classList.remove("hard");
+
+if(difficulty==="hard"){
+
+    board.classList.add("hard");
+
+}
 
 }
 
