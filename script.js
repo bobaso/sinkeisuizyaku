@@ -140,6 +140,12 @@ function startGame(){
 
     gameScreen.style.display = "block";
 
+    difficultyScreen.classList.add("hidden");
+
+startScreen.style.display = "none";
+
+gameScreen.style.display = "block";
+
     player1Score = 0;
 
     player2Score = 0;
@@ -618,6 +624,8 @@ homeBtn.addEventListener("click",()=>{
     resultScreen.style.display = "none";
 
     gameScreen.style.display = "none";
+
+    difficultyScreen.classList.add("hidden");
 
     startScreen.style.display = "flex";
 
