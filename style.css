@@ -593,11 +593,11 @@ body{
 
     position:absolute;
 
-    left:20px;
+    left:12px;
 
-    bottom:20px;
+    bottom:12px;
 
-    width:120px;
+    width:clamp(40px, 8vw, 60px);
 
     border:none;
 
