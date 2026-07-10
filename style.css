@@ -204,16 +204,13 @@ body{
 /* ==========================
 スコア
 ========================== */
-
 .scoreArea{
 
     position:relative;
 
-    width:100%;
+    width:100vw;
 
-    max-width:420px;
-
-    margin:15px auto 25px;
+    margin:12px calc(50% - 50vw) 25px;
 
 }
 
