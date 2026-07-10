@@ -191,6 +191,15 @@ body{
     overflow-y:auto;
 
 }
+.gameContainer{
+
+    width:100%;
+
+    max-width:430px;
+
+    margin:0 auto;
+
+}
 
 /* ==========================
 スコア
