@@ -207,17 +207,13 @@ body{
 
 .scoreArea{
 
-    display:flex;
+    position:relative;
 
-    justify-content:space-between;
+    width:100%;
 
-    align-items:center;
+    max-width:420px;
 
-    margin-bottom:20px;
-
-    font-size:20px;
-
-    font-weight:bold;
+    margin:15px auto 25px;
 
 }
 
