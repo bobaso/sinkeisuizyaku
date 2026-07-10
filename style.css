@@ -228,6 +228,37 @@ body{
     left:61%;
 
 }
+.scoreImage{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+.scoreNumber{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:#ffffff;
+
+    text-shadow:2px 2px 5px rgba(0,0,0,.5);
+
+    width:40px;
+
+    text-align:center;
+
+}
 /* ==========================
 ターン表示
 ========================== */
