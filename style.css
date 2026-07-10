@@ -214,17 +214,7 @@ body{
 
 }
 
-#player1Score{
 
-    left:39%;
-
-}
-
-#player2Score{
-
-    left:61%;
-
-}
 .scoreImage{
 
     display:block;
@@ -241,19 +231,30 @@ body{
 
     top:50%;
 
-    transform:translateY(-50%);
+    transform:translate(-50%,-50%);
 
-    font-size:34px;
+    width:auto;
+
+    font-size:clamp(34px,8vw,48px);
 
     font-weight:bold;
 
-    color:#ffffff;
+    color:#fff;
 
-    text-shadow:2px 2px 5px rgba(0,0,0,.5);
+    text-shadow:
+        3px 3px 6px rgba(0,0,0,.55);
 
-    width:40px;
+}
 
-    text-align:center;
+#player1Score{
+
+    left:47%;
+
+}
+
+#player2Score{
+
+    left:53%;
 
 }
 /* ==========================
