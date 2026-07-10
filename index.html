@@ -99,39 +99,40 @@
 
 <div id="gameScreen" class="screen hidden">
 
-  <div class="scoreArea">
+    <div class="gameContainer">
 
-    <img
-        src="score_ui.png"
-        class="scoreImage"
-        alt="スコア">
+        <div class="scoreArea">
 
-    <div
-        id="player1Score"
-        class="scoreNumber">
-        0
-    </div>
+            <img
+                src="score_ui.png"
+                class="scoreImage"
+                alt="スコア">
 
-    <div
-        id="player2Score"
-        class="scoreNumber">
-        0
+            <div
+                id="player1Score"
+                class="scoreNumber">
+                0
+            </div>
+
+            <div
+                id="player2Score"
+                class="scoreNumber">
+                0
+            </div>
+
+        </div>
+
+        <div id="turnText" class="turnText">
+            プレイヤー1の番
+        </div>
+
+        <div id="board" class="board">
+            <!-- JavaScriptでカード生成 -->
+        </div>
+
     </div>
 
 </div>
-    <div id="turnText" class="turnText">
-        プレイヤー1の番
-    </div>
-
-    <div id="board" class="board">
-
-        <!-- JavaScriptでカード生成 -->
-
-    </div>
-
-</div>
-
-
 <!-- ===========================
 ゲーム終了画面
 =========================== -->
