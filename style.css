@@ -244,13 +244,15 @@ body{
 
 #player1Score{
 
-    left:47%;
+    left:42%;
 
 }
 
 #player2Score{
 
-    left:53%;
+    right:24%;
+
+}
 
 }
 /* ==========================
