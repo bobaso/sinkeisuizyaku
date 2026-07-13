@@ -691,6 +691,28 @@ body{
 }
 
 /*==========================
+画面切り替えアニメーション
+==========================*/
+
+.screen,
+#difficultyScreen{
+
+    opacity:1;
+    transform:scale(1);
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+
+}
+
+.hidden{
+
+    opacity:0;
+    transform:scale(.96);
+    pointer-events:none;
+
+}
+/*==========================
 .hidden（必ず一番最後）
 ==========================*/
 
