@@ -713,11 +713,30 @@ body{
 
 }
 /*==========================
-.hidden（必ず一番最後）
+画面切り替え
 ==========================*/
+
+.screen,
+#difficultyScreen{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:scale(1);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+
+}
 
 .hidden{
 
-    display:none !important;
+    opacity:0;
+    visibility:hidden;
+
+    transform:scale(.96);
+
+    pointer-events:none;
 
 }
