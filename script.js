@@ -181,20 +181,9 @@ function startGame(){
 
 function updateScore(){
 
-    if(gameMode === "single"){
+    player1ScoreText.textContent = player1Score;
 
-player1ScoreText.textContent = player1Score;
-
-player2ScoreText.textContent = player2Score;
-    }else{
-
-        player1ScoreText.textContent =
-            "プレイヤー1：" + player1Score + "組";
-
-        player2ScoreText.textContent =
-            "プレイヤー2：" + player2Score + "組";
-
-    }
+    player2ScoreText.textContent = player2Score;
 
     updateTurnText();
 
