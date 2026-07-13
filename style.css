@@ -693,26 +693,34 @@ body{
 /*==========================
 メニュー画面のアニメーション
 ==========================*/
+/* 表示 */
 .fadeIn{
+    animation:fadeIn .35s ease forwards;
+}
 
-    animation:fadeIn .35s ease;
-
+/* 非表示 */
+.fadeOut{
+    animation:fadeOut .35s ease forwards;
 }
 
 @keyframes fadeIn{
-
     from{
-
         opacity:0;
         transform:scale(.96);
-
     }
-
     to{
-
         opacity:1;
         transform:scale(1);
-
     }
+}
 
+@keyframes fadeOut{
+    from{
+        opacity:1;
+        transform:scale(1);
+    }
+    to{
+        opacity:0;
+        transform:scale(.96);
+    }
 }
