@@ -162,13 +162,17 @@ setTimeout(()=>{
 // -----------------------------
 function startGame(){
 
-    startScreen.classList.add("hidden");
+startScreen.classList.add("hidden");
 
-    difficultyScreen.classList.add("hidden");
+difficultyScreen.classList.add("hidden");
 
-    resultScreen.classList.add("hidden");
+resultScreen.classList.add("hidden");
+
+setTimeout(()=>{
 
     gameScreen.classList.remove("hidden");
+
+},100);
 
     player1Score = 0;
 
