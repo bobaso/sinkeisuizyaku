@@ -597,7 +597,8 @@ body{
 
     position:relative;
 
-    width:min(92vw,520px);
+    width:100%;
+    max-width:430px;
 
 }
 
