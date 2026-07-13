@@ -699,9 +699,13 @@ function cpuTurn(){
 // -----------------------------
 function endGame(){
 
-    gameScreen.classList.add("hidden");
+gameScreen.classList.add("hidden");
+
+setTimeout(()=>{
 
     resultScreen.classList.remove("hidden");
+
+},200);
 
 if(player1Score > player2Score){
 
@@ -751,12 +755,16 @@ retryBtn.addEventListener("click",()=>{
 // -----------------------------
 homeBtn.addEventListener("click",()=>{
 
-    resultScreen.classList.add("hidden");
+resultScreen.classList.add("hidden");
 
-    gameScreen.classList.add("hidden");
+gameScreen.classList.add("hidden");
 
-    difficultyScreen.classList.add("hidden");
+difficultyScreen.classList.add("hidden");
+
+setTimeout(()=>{
 
     startScreen.classList.remove("hidden");
+
+},200);
 
 });
