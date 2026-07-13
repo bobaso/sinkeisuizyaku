@@ -101,13 +101,9 @@ multiBtn.addEventListener("click", () => {
 // 難易度画面表示
 function openDifficulty(){
 
-    startScreen.classList.add("hidden");
-
-    setTimeout(()=>{
-
-        difficultyScreen.classList.remove("hidden");
-
-    },200);
+    startScreen.classList.add("fadeOut");
+    difficultyScreen.classList.remove("hidden");
+    difficultyScreen.classList.add("fadeIn");
 
 }
 const backBtn =
@@ -115,13 +111,9 @@ const backBtn =
 
 backBtn.addEventListener("click",()=>{
 
-    difficultyScreen.classList.add("hidden");
-
-    setTimeout(()=>{
-
-        startScreen.classList.remove("hidden");
-
-    },200);
+    difficultyScreen.classList.add("fadeOut");
+    startScreen.classList.remove("hidden");
+    startScreen.classList.add("fadeIn");
 
 });
 // -----------------------------
@@ -146,12 +138,7 @@ button.addEventListener("click",()=>{
     }
 
 difficultyScreen.classList.add("hidden");
-
-setTimeout(()=>{
-
-    startGame();
-
-},200);
+startGame();
 
 });
 
@@ -168,11 +155,7 @@ difficultyScreen.classList.add("hidden");
 
 resultScreen.classList.add("hidden");
 
-setTimeout(()=>{
-
-    gameScreen.classList.remove("hidden");
-
-},100);
+gameScreen.classList.remove("hidden");
 
     player1Score = 0;
 
@@ -700,12 +683,7 @@ function cpuTurn(){
 function endGame(){
 
 gameScreen.classList.add("hidden");
-
-setTimeout(()=>{
-
-    resultScreen.classList.remove("hidden");
-
-},200);
+resultScreen.classList.remove("hidden");
 
 if(player1Score > player2Score){
 
@@ -761,10 +739,6 @@ gameScreen.classList.add("hidden");
 
 difficultyScreen.classList.add("hidden");
 
-setTimeout(()=>{
-
-    startScreen.classList.remove("hidden");
-
-},200);
+startScreen.classList.remove("hidden");
 
 });
