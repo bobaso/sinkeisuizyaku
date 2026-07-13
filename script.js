@@ -102,8 +102,22 @@ multiBtn.addEventListener("click", () => {
 function openDifficulty(){
 
     startScreen.classList.add("fadeOut");
-    difficultyScreen.classList.remove("hidden");
-    difficultyScreen.classList.add("fadeIn");
+
+    startScreen.addEventListener("animationend", function(){
+
+        startScreen.classList.remove("fadeOut");
+        startScreen.classList.add("hidden");
+
+        difficultyScreen.classList.remove("hidden");
+        difficultyScreen.classList.add("fadeIn");
+
+    }, { once:true });
+
+    difficultyScreen.addEventListener("animationend", function(){
+
+        difficultyScreen.classList.remove("fadeIn");
+
+    }, { once:true });
 
 }
 const backBtn =
@@ -112,8 +126,22 @@ const backBtn =
 backBtn.addEventListener("click",()=>{
 
     difficultyScreen.classList.add("fadeOut");
-    startScreen.classList.remove("hidden");
-    startScreen.classList.add("fadeIn");
+
+    difficultyScreen.addEventListener("animationend", function(){
+
+        difficultyScreen.classList.remove("fadeOut");
+        difficultyScreen.classList.add("hidden");
+
+        startScreen.classList.remove("hidden");
+        startScreen.classList.add("fadeIn");
+
+    }, { once:true });
+
+    startScreen.addEventListener("animationend", function(){
+
+        startScreen.classList.remove("fadeIn");
+
+    }, { once:true });
 
 });
 // -----------------------------
