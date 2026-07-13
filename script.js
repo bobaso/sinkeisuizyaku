@@ -103,7 +103,11 @@ function openDifficulty(){
 
     startScreen.classList.add("hidden");
 
-    difficultyScreen.classList.remove("hidden");
+    setTimeout(()=>{
+
+        difficultyScreen.classList.remove("hidden");
+
+    },200);
 
 }
 const backBtn =
@@ -113,7 +117,11 @@ backBtn.addEventListener("click",()=>{
 
     difficultyScreen.classList.add("hidden");
 
-    startScreen.classList.remove("hidden");
+    setTimeout(()=>{
+
+        startScreen.classList.remove("hidden");
+
+    },200);
 
 });
 // -----------------------------
@@ -137,9 +145,13 @@ button.addEventListener("click",()=>{
 
     }
 
-    difficultyScreen.classList.add("hidden");
+difficultyScreen.classList.add("hidden");
+
+setTimeout(()=>{
 
     startGame();
+
+},200);
 
 });
 
