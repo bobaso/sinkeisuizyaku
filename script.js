@@ -562,7 +562,33 @@ function changeTurn(){
 // -----------------------------
 function rememberCard(card){
 
-    // 後でAIを実装予定
+    // 同じカードは記憶しない
+    if(cpuMemory.some(c => c.dataset.index === card.dataset.index)){
+        return;
+    }
+
+    cpuMemory.push(card);
+
+    // 記憶できる枚数
+    let memoryLimit;
+
+    if(difficulty === "easy"){
+
+        memoryLimit = 4;
+
+    }else{
+
+        // ふつう・むずかしい
+        memoryLimit = 8;
+
+    }
+
+    // 古い記憶から忘れる
+    while(cpuMemory.length > memoryLimit){
+
+        cpuMemory.shift();
+
+    }
 
 }
 
@@ -576,6 +602,47 @@ function cpuTurn(){
 
     if(currentPlayer !== 2) return;
 
+    // 記憶を使う確率
+    const useMemory =
+        difficulty === "easy"
+        ? Math.random() < 0.5
+        : Math.random() < 0.8;
+
+    // 記憶の中からペアを探す
+    if(useMemory){
+
+        for(let i=0;i<cpuMemory.length;i++){
+
+            for(let j=i+1;j<cpuMemory.length;j++){
+
+                const a = cpuMemory[i];
+                const b = cpuMemory[j];
+
+                if(a.dataset.id===b.dataset.id &&
+                   a.dataset.match==="false" &&
+                   b.dataset.match==="false" &&
+                   a.dataset.open==="false" &&
+                   b.dataset.open==="false"){
+
+                    openCard(a);
+
+                    setTimeout(()=>{
+
+                        openCard(b);
+
+                    },800);
+
+                    return;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    // ペアが分からない場合はランダム
     const selectable = cards.filter(card=>{
 
         return card.dataset.open==="false"
