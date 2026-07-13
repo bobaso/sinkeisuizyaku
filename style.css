@@ -58,13 +58,11 @@ body{
     width:min(92vw,520px);
 
 }
-
-.startImage{
+.startImage,
+.difficultyBackground{
 
     width:100%;
-
     display:block;
-
     border-radius:20px;
 
 }
