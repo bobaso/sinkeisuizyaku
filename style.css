@@ -23,6 +23,8 @@ body{
 
     min-height:100dvh;
 
+    margin:0 auto;
+
     padding:0 20px;
 
     text-align:center;
@@ -184,7 +186,13 @@ body{
 
 #gameScreen{
 
+    width:100%;
+
+    max-width:430px;
+
     min-height:100vh;
+
+    margin:0 auto;
 
     overflow-y:auto;
 
@@ -206,9 +214,9 @@ body{
 
     position:relative;
 
-    width:100vw;
+    width:calc(100% + 40px);
 
-    margin:12px calc(50% - 50vw) 25px;
+    margin:12px -20px 25px;
 
 }
 
